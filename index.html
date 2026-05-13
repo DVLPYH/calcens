@@ -306,17 +306,17 @@
 
     // دوال الحساب
     function calcRegAvg(L, T) {
-        L = parseFloat(L) || 0; T = parseFloat(T) || 0;
-        return ((L * 2) + T) / 3;
-    }
+    L = parseFloat(L) || 0; T = parseFloat(T) || 0;
+    return (L * 0.67) + (T * 0.33);
+}
 
     function calcMergedAvg(L1, L2, T1, T2) {
-        L1 = parseFloat(L1) || 0; L2 = parseFloat(L2) || 0;
-        T1 = parseFloat(T1) || 0; T2 = parseFloat(T2) || 0;
-        let combined_L = (L1 + L2) / 2;
-        let combined_T = (T1 + T2) / 2;
-        return ((combined_L * 2) + combined_T) / 3;
-    }
+    L1 = parseFloat(L1) || 0; L2 = parseFloat(L2) || 0;
+    T1 = parseFloat(T1) || 0; T2 = parseFloat(T2) || 0;
+    let combined_L = (L1 + L2) / 2;
+    let combined_T = (T1 + T2) / 2;
+    return (combined_L * 0.67) + (combined_T * 0.33);
+}
 
     function updateDisplayBox(id, avg, hasData) {
         let el = document.getElementById(id);
